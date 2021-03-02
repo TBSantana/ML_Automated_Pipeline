@@ -63,7 +63,7 @@ How to access the online documentation:
 
 The predicted price for this will show up in the ```Response body```, like the following image:
 
-![response](/images/usage_examples3.png)
+![response](/images/usabe_examples3.png)
 
 ## Task 2: AWS infrastructure
 *Description* - Propose an AWS architecture to serve a solution for the previous task.
