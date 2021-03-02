@@ -43,9 +43,19 @@ How to access the online documentation:
 
 #### Usage examples
 1. Go to the API documentation in ```http://localhost:5000/docs```
-2. Click on the ```predict``` POST method and click on "Try it out"
-3. Paste the json below in the "Request body" and click on "Execute"
-
+2. Click on the ```predict``` POST method and click on ```Try it out```
+3. Paste the json below in the "Request body" and click on ```Execute```
+```
+{
+  "suburb": "Elsternwick",
+  "rooms": 4,
+  "typeH": "h",
+  "postcode": "3185.0",
+  "address": "15 Murray St",
+  "buildingArea": 204.0
+}
+```
+The predicted price for this will show up in the ```Response body```, like the following image:
 
 ## Task 2: AWS infrastructure
 *Description* - Propose an AWS architecture to serve a solution for the previous task.
