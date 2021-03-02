@@ -1,0 +1,26 @@
+version: "3"
+services:
+    clean_data: 
+        image: clean_image
+        volumes:
+            - "./preprocessed_data:/app/preprocessed_data"
+    transform_data: 
+        image: transform_image
+        depends_on: 
+            - clean_data
+        volumes:
+            - "./preprocessed_data:/app/preprocessed_data"
+    train_model: 
+        image: train_image
+        depends_on: 
+            - transform_data
+        volumes:
+            - "./preprocessed_data:/app/preprocessed_data"
+    prediction: 
+        image: predict_image
+        ports: 
+            - "5000:5000"
+        depends_on: 
+            - train_model
+        volumes:
+            - "./preprocessed_data:/app/preprocessed_data" 
