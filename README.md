@@ -44,6 +44,9 @@ How to access the online documentation:
 #### Usage examples
 1. Go to the API documentation in ```http://localhost:5000/docs```
 2. Click on the ```predict``` POST method and click on ```Try it out```
+
+![prediction](/images/usage_examples1.png)
+
 3. Paste the json below in the "Request body" and click on ```Execute```
 ```
 {
@@ -55,7 +58,12 @@ How to access the online documentation:
   "buildingArea": 204.0
 }
 ```
+
+![execute](/images/usage_examples2.png)
+
 The predicted price for this will show up in the ```Response body```, like the following image:
+
+![response](/images/usage_examples3.png)
 
 ## Task 2: AWS infrastructure
 *Description* - Propose an AWS architecture to serve a solution for the previous task.
