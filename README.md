@@ -51,3 +51,4 @@ How to access the online documentation:
 *Description* - Propose an AWS architecture to serve a solution for the previous task.
 
 ## Task 3: Coding challenge (Bonus)
+TODO
