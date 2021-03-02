@@ -31,10 +31,7 @@ Download the project by cloning the Git repository:
 
 ```docker-compose up```
 
-#### Usage examples
-At the end of this pipeline, the prediction service will be running in the host at this endpoint: 
-
-```http://localhost:5000```
+At the end of this pipeline, the prediction service will be running in the host at this endpoint: ```http://localhost:5000```
 
 
 ### Part II: Create a Rest API documented with Swagger that serves a ML model predictions
@@ -43,6 +40,12 @@ It also includes an interactive API documentation (Swagger).
 How to access the online documentation:
 + Main documentation - <host_address>/docs. Ex.: ```http://127.0.0.1:8000/docs```
 + Alternative documentation - <host_address>/redoc. Ex.: ```http://127.0.0.1:8000/redoc```
+
+#### Usage examples
+1. Go to the API documentation in ```http://localhost:5000/docs```
+2. Click on the ```predict``` POST method and click on "Try it out"
+3. Paste the json below in the "Request body" and click on "Execute"
+
 
 ## Task 2: AWS infrastructure
 *Description* - Propose an AWS architecture to serve a solution for the previous task.
