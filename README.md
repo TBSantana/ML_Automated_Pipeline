@@ -1,4 +1,4 @@
-An automated ML model training process using Docker Compose
+An automated ML model training process using Docker Compose.
 
 ## Task 1: ML model serving
 There are two goals for this task:
