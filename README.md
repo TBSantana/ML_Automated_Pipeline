@@ -16,7 +16,7 @@ Download the project by cloning the Git repository:
 
 ```https://github.com/TBSantana/Ifood_Exercise.git```
 
-#### Usage:
+#### Project execution:
 1. In the terminal, go to the main project's directory and execute the following code to create the images:
 
 ```docker bluid -t clean_image -f clean_data/Dockerfile .```
@@ -31,7 +31,7 @@ Download the project by cloning the Git repository:
 
 ```docker-compose up```
 
-#### Make predictions
+#### Usage examples
 At the end of this pipeline, the prediction service will be running in the host at this endpoint: 
 
 ```http://localhost:5000```
