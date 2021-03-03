@@ -1,6 +1,9 @@
 # AWS Infrastructure for ML
 
+The proposed AWS Infrastructure for this project is as follow:
 <img src = "images/AWS Infra.png">
+
+This is a pretty simple project, where many steps were supressed.
 
 ## Sagemaker
 
