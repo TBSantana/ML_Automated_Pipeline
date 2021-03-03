@@ -13,13 +13,28 @@ This model consists on up all the code under the AWS Sagemaker Management and st
 Since AWS Sagemaker offers a lot of products to support ML automated pipeline, I will focus this discussion on this platform.
 
 ### Sagemaker advantages
- +  Transparency
- +  Security and Privacy 
- +  Feature Store 
- +  Data Labeling 
- +  Data Processing at Scale 
+ +  Collect and Prepare Training Data
+    +  Security and Privacy 
+    +  Feature Store 
+    +  Data Labeling 
+    +  Data Processing at Scale 
  +  Build Models
-    +  One-click Jupyter Notebooks 
+    +  One-click Jupyter Notebooks
+    +  Built-in Algorithms
+    +  Pre-Built Solutions and Open Source Models 
+    +  AutoML 
+    +  Optimized for Major Frameworks (Tensorflow, Pytorch, MXNet, Keras, etc)
++ Train and Tune Models
+    + Experiment Management and Tracking
+    + Managed Spot Training (**reduce training costs by up to 90%**)
+    + One-Click Training 
+    + Distributed Training 
++ Deploy Models to Production
+    + CI/CD support
+    + Continuously Monitor Models 
+    + Integration with Kubernetes 
+    + Human review 
+    + One-Click Deployment 
 
  + Redução de 54% no TCO (Total Coast Ownership)
  + Fornece containers otimizados de frameworks como Tensorflow, capazes de gerar uma redução de até 90% no custo de treinamento
