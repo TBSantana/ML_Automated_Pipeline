@@ -84,7 +84,7 @@ How to access the online documentation:
 
 ![try it out](/images/usage_examples2.png)
 
-![execute](/images/usage_images4.png)
+![execute](/images/usage_examples4.png)
 
 The related predicted price will show up in the ```Response body```, like the following image:
 
