@@ -22,6 +22,8 @@ This is the project of an automated ML model training process using Docker Compo
 
 [Task 3 - Coding challenge (Bonus)](#task-3---coding-challenge-bonus)
 
+[Project improvements](#project-improvements)
+
 
 
 ## Task 1 - ML model serving
@@ -100,4 +102,15 @@ See the details of the proposed infrastructure [here](https://github.com/TBSanta
 ![here](/aws_infrastructure/images/AWS%20Infra.png). 
 
 ## Task 3 - Coding challenge (Bonus)
-TODO
+Sadly there were no time to deliver this part of the exercise.
+
+## Project improvements
+As can be seen, this project is pretty simple. It works, but do not covers the entire ML pipeline. The time was short, so I had to focus on have a deliverable. The improvements to be made are as follows:
++ Storage the training set on some database
++ Do a deeper analysis on the raw data
++ Create more new features during the transformation step
++ Correct the cqtegorical encoding, witch does not follows the best practices of ML
++ Select more algorithms during the training step
++ Develop a Tuning step and select the model that presents the best performance
++ Add a logging feature to monitoring the containers execution
+
