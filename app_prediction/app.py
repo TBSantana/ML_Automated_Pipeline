@@ -30,7 +30,7 @@ async def index():
 
 def categorical_encoder(cat_name, cat_value):
 	
-	with open(ROOT_PATH / 'preprocessed_data/{}_encoder.json'.format(cat_name), 'r') as file:
+	with open(ROOT_PATH / 'data/{}_encoder.json'.format(cat_name), 'r') as file:
 		data = json.load(file)
 	values = list(data.values())
 	return data[cat_value] if cat_value in data.keys() else int((values[0]+values[-1])/2)
@@ -49,8 +49,8 @@ def inputTransformer(house):
 @app.post('/predict')
 def get_prediction(house_info: House):
 
-	scaler = jb.load(ROOT_PATH / 'preprocessed_data/scaler.pkl.z')
-	model = jb.load(ROOT_PATH / 'preprocessed_data/model.pkl.z')
+	scaler = jb.load(ROOT_PATH / 'data/scaler.pkl.z')
+	model = jb.load(ROOT_PATH / 'data/model.pkl.z')
 	
 	X = np.array(inputTransformer(house_info)).reshape(1, -1)
 	X_poly = scaler.transform(X)
@@ -59,13 +59,13 @@ def get_prediction(house_info: House):
 	
 @app.get('/suburb')
 def get_suburbs():
-	with open(ROOT_PATH / 'preprocessed_data/Suburb_encoder.json', 'r') as file:
+	with open(ROOT_PATH / 'data/Suburb_encoder.json', 'r') as file:
 		data = json.load(file)
 	return {'suburbs': list(data.keys())}
 	
 @app.get('/stname')
 def get_suburbs():
-	with open(ROOT_PATH / 'preprocessed_data/stname_encoder.json', 'r') as file:
+	with open(ROOT_PATH / 'data/stname_encoder.json', 'r') as file:
 		data = json.load(file)
 	return {'stname': list(data.keys())}
 

@@ -99,8 +99,8 @@ def transform_categorical(train_set, test_set, categorical_variables):
 def read_data(path):
     
     ROOT_PATH = Path(path[1]).resolve().parent
-    train_set = pd.read_csv(ROOT_PATH / 'preprocessed_data/cleanedTrain.csv')
-    test_set = pd.read_csv(ROOT_PATH / 'preprocessed_data/cleanedTest.csv')    
+    train_set = pd.read_csv(ROOT_PATH / 'data/cleanedTrain.csv')
+    test_set = pd.read_csv(ROOT_PATH / 'data/cleanedTest.csv')    
     return train_set, test_set
 
 
@@ -110,14 +110,14 @@ def save_data(path, train_set, test_set, train_set2, test_set2, cat_encoder):
     ROOT_PATH = Path(path[1]).resolve().parent
     
     for cat in ['Suburb', 'Type', 'Postcode', 'stname']:
-        with open(ROOT_PATH / 'preprocessed_data/{}_encoder.json'.format(cat), 'w') as encoder:
+        with open(ROOT_PATH / 'data/{}_encoder.json'.format(cat), 'w') as encoder:
             encoder.write('{}'.format(json.dumps(cat_encoder[cat])))
 
-    train_set.to_csv(ROOT_PATH / 'preprocessed_data/price_features_train.csv', index=False)
-    test_set.to_csv(ROOT_PATH / 'preprocessed_data/price_features_test.csv', index=False)
+    train_set.to_csv(ROOT_PATH / 'data/price_features_train.csv', index=False)
+    test_set.to_csv(ROOT_PATH / 'data/price_features_test.csv', index=False)
 
-    train_set2.to_csv(ROOT_PATH / 'preprocessed_data/ba_features_train.csv', index=False)
-    test_set2.to_csv(ROOT_PATH / 'preprocessed_data/ba_features_test.csv', index=False)
+    train_set2.to_csv(ROOT_PATH / 'data/ba_features_train.csv', index=False)
+    test_set2.to_csv(ROOT_PATH / 'data/ba_features_test.csv', index=False)
 
 
 def transform_data(path):

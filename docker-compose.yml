@@ -3,20 +3,20 @@ services:
     clean_data: 
         image: clean_image
         volumes:
-            - "./preprocessed_data:/app/preprocessed_data"
+            - "./data:/app/data"
     transform_data: 
         image: transform_image
         depends_on: 
             - clean_data
         volumes:
-            - "./preprocessed_data:/app/preprocessed_data"
+            - "./data:/app/data"
     train_model: 
         image: train_image
         depends_on: 
             - transform_data
             - clean_data
         volumes:
-            - "./preprocessed_data:/app/preprocessed_data"
+            - "./data:/app/data"
     prediction: 
         image: predict_image
         ports: 
@@ -26,4 +26,4 @@ services:
             - transform_data
             - clean_data
         volumes:
-            - "./preprocessed_data:/app/preprocessed_data" 
+            - "./data:/app/data" 

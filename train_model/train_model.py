@@ -129,9 +129,9 @@ def train_model(path):
 	print('\n** Training Model executing **')
 	root_dir = Path(path[1]).resolve().parent
 	
-	# Read the preprocessed_data
-	train_set = pd.read_csv(root_dir / 'preprocessed_data/price_features_train.csv')
-	test_set = pd.read_csv(root_dir / 'preprocessed_data/price_features_test.csv')
+	# Read the data
+	train_set = pd.read_csv(root_dir / 'data/price_features_train.csv')
+	test_set = pd.read_csv(root_dir / 'data/price_features_test.csv')
 	
 	# Infer the missing BuildingArea
 	ba_features, ba_poly_scaler, ba_model = design_ba_model(train_set, test_set)
@@ -144,8 +144,8 @@ def train_model(path):
 	
 	poly_scaler, model = model_design(features, train_set, test_set)
 	
-	jb.dump(poly_scaler, root_dir / 'preprocessed_data/scaler.pkl.z')
-	jb.dump(model, root_dir / 'preprocessed_data/model.pkl.z')
+	jb.dump(poly_scaler, root_dir / 'data/scaler.pkl.z')
+	jb.dump(model, root_dir / 'data/model.pkl.z')
 	
 if __name__ == '__main__':
 	import time

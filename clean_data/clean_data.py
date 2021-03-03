@@ -12,8 +12,8 @@ log.basicConfig(format='%(asctime)s %(message)s')
 def read_raw_data(path):
 	
 	ROOT_PATH = Path(path[1]).resolve().parent
-	train_set = pd.read_csv(ROOT_PATH / 'preprocessed_data/train_set.csv',index_col=0) 
-	test_set = pd.read_csv(ROOT_PATH / 'preprocessed_data/test_set.csv',index_col=0)
+	train_set = pd.read_csv(ROOT_PATH / 'data/train_set.csv',index_col=0) 
+	test_set = pd.read_csv(ROOT_PATH / 'data/test_set.csv',index_col=0)
 	
 	log.info('Data set read successfully')	
 	return train_set, test_set
@@ -37,8 +37,8 @@ def remove_na(df):
 def save_clean_data(path, newTrain, newTest):
 	
 	ROOT_PATH = Path(path[1]).resolve().parent
-	newTrain.to_csv(ROOT_PATH / 'preprocessed_data/cleanedTrain.csv', index=False)
-	newTest.to_csv(ROOT_PATH / 'preprocessed_data/cleanedTest.csv', index=False)
+	newTrain.to_csv(ROOT_PATH / 'data/cleanedTrain.csv', index=False)
+	newTest.to_csv(ROOT_PATH / 'data/cleanedTest.csv', index=False)
 	
 
 # In[6]:
