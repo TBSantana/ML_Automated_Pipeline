@@ -95,7 +95,9 @@ The related predicted price will show up in the ```Response body```, like the fo
 ## Task 2 - AWS infrastructure
 *Description* - Propose an AWS architecture to serve a solution for the previous task.
 
-See the details of the proposed infrastructure [here](images/AWS%20Infra.png). 
+See the details of the proposed infrastructure [here](https://github.com/TBSantana/ML_Automated_Pipeline/blob/master/aws_infrastructure/Task%202%20-%20AWS%20Infrastructure%20for%20ML%20project.ipynb)
+
+![here](/aws_infrastructure/images/AWS%20Infra.png). 
 
 ## Task 3 - Coding challenge (Bonus)
 TODO
