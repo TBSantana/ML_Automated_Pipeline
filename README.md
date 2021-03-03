@@ -29,7 +29,7 @@ There are two goals for this task:
 + *Problem description:* House Price Prediction
 + *Metrics:* Root Mean Squared Error (RMSE)
 + *Language:* Python
-+ *Pipeline orquestration:* Docker Compose
++ *Pipeline orchestration:* Docker Compose
 
 #### Prerequisites
 Docker Compose must be installed on the host.
