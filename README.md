@@ -63,8 +63,8 @@ At the end of this pipeline, the prediction service will be running in the host 
 The REST API has been created using the ```FastAPI```, that is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints. 
 It also includes an interactive API documentation (Swagger). 
 How to access the online documentation:
-+ Main documentation - <host_address>/docs. Ex.: ```http://<host_address>:5000/docs```
-+ Alternative documentation - <host_address>/redoc. Ex.: ```http://<host_address>:5000/redoc```
++ Main documentation - <host_address>/docs. Ex.: ```http://127.0.0.2:5000/docs```
++ Alternative documentation - <host_address>/redoc. Ex.: ```http://127.0.0.2:5000/redoc```
 
 #### Usage examples
 1. Access the API documentation at ```http://<host_address>:5000/docs``` and click on the ```predict``` POST method
