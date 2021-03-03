@@ -2,19 +2,19 @@ An automated ML model training process using Docker Compose.
 
 ## Index
 
-[1. Task 1 - ML model serving](#task-1---ml-model-serving)
+[Task 1 - ML model serving](#task-1---ml-model-serving)
 
-[a. Part I: Create an automated ML model training process](#part-i---create-an-automated-ml-model-training-process)
+  * [Part I: Create an automated ML model training process](#part-i---create-an-automated-ml-model-training-process)
 
-[- Prerequisites](#prerequisites)
+    * [Prerequisites](#prerequisites)
 
-[- Installation](#installation)
+    * [Installation](#installation)
 
-[- Project execution](#project-execution)
+    * [Project execution](#project-execution)
 
-[b. Part II: Rest API documentation and Swagger](#part-ii---rest-api-documentation-and-swagger)
+  * [Part II: Rest API documentation and Swagger](#part-ii---rest-api-documentation-and-swagger)
 
-[- Usage examples](#usage-examples)
+    * [Usage examples](#usage-examples)
 
 [2. Task 2 - AWS infrastructure](#task-2---aws-infrastructure)
 
@@ -32,7 +32,7 @@ There are two goals for this task:
 + *Pipeline orquestration:* Docker Compose
 
 #### Prerequisites
-Must have Docker Compose installed in the host.
+Docker Compose must be installed on the host.
 
 #### Installation
 Download the project by cloning the Git repository: 
