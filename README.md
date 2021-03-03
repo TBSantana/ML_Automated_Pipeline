@@ -69,21 +69,21 @@ How to access the online documentation:
 
 ![prediction](/images/usage_examples1.png)
 
-2.  Click on ```Try it out``` and paste the json below in the "Request body". Then, click on ```Execute```
+2.  Click on ```Try it out```, copy the following json and paste it in the "Request body" section. Then, click on ```Execute```.
 ```
 {
-  "suburb": "Elsternwick",
-  "rooms": 4,
-  "typeH": "h",
-  "postcode": "3185.0",
-  "address": "15 Murray St",
-  "buildingArea": 204.0
+  "suburb": "Elsternwick",        # The suburb where the house is located
+  "rooms": 4,                     # The number of rooms
+  "typeH": "h",                   # The type of the house
+  "postcode": "3185.0",           # The postal code of the house
+  "address": "15 Murray St",      # The address of the house
+  "buildingArea": 204.0           # The size of the house
 }
 ```
 
-![execute](/images/usage_examples4.png)
+![try it out](/images/usage_examples2.png)
 
-![execute](/images/usage_examples2.png)
+![execute](/images/usage_examples4.png)
 
 The related predicted price will show up in the ```Response body```, like the following image:
 
