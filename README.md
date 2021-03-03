@@ -35,6 +35,10 @@ There are two goals for this task:
 + *Language:* Python
 + *Pipeline orchestration:* Docker Compose
 
+
+<details><summary>Click here to see the details of the installation process.</summary>
+<p>
+
 #### Prerequisites
 Docker Compose must be installed on the host.
 
@@ -60,6 +64,8 @@ Download the project by cloning the Git repository:
 
 At the end of this pipeline, the prediction service will be running in the host at this endpoint: ```http://<host_address>:5000```
 
+</p>
+</details>
 
 ### Part II - Rest API documentation and Swagger
 The REST API has been created using the ```FastAPI```, that is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints. 
@@ -104,8 +110,6 @@ The related predicted price will show up in the ```Response body```.
 *Description* - Propose an AWS architecture to serve a solution for the previous task.
 
 See the details of the proposed infrastructure [here](https://github.com/TBSantana/ML_Automated_Pipeline/blob/master/aws_infrastructure/Task%202%20-%20AWS%20Infrastructure%20for%20ML%20project.md).
-
-![here](/aws_infrastructure/images/AWS%20Infra.png). 
 
 ## Task 3 - Coding challenge (Bonus)
 Sadly there were no time to deliver this part of the exercise.
