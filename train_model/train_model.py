@@ -148,5 +148,7 @@ def train_model(path):
 	jb.dump(model, root_dir / 'preprocessed_data/model.pkl.z')
 	
 if __name__ == '__main__':
-    train_model(sys.argv)
+	import time
+	time.sleep(5)
+	train_model(sys.argv)
 

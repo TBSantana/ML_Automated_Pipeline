@@ -14,6 +14,7 @@ services:
         image: train_image
         depends_on: 
             - transform_data
+            - clean_data
         volumes:
             - "./preprocessed_data:/app/preprocessed_data"
     prediction: 
@@ -22,5 +23,7 @@ services:
             - "5000:5000"
         depends_on: 
             - train_model
+            - transform_data
+            - clean_data
         volumes:
             - "./preprocessed_data:/app/preprocessed_data" 

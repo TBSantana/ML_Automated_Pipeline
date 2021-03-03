@@ -43,7 +43,7 @@ def transform_temporal_variables(train_set, test_set):
     return train_set, test_set
 
 
-def transform_categorical(train_set, test_set):
+def transform_categorical(train_set, test_set, categorical_variables):
 
     train_set.loc[:, 'stname'] = train_set['Address'].map(lambda x:' '.join(x.split(' ')[1:]))
     test_set.loc[:, 'stname'] = test_set['Address'].map(lambda x:' '.join(x.split(' ')[1:]))
@@ -101,7 +101,7 @@ def read_data(path):
     ROOT_PATH = Path(path[1]).resolve().parent
     train_set = pd.read_csv(ROOT_PATH / 'preprocessed_data/cleanedTrain.csv')
     test_set = pd.read_csv(ROOT_PATH / 'preprocessed_data/cleanedTest.csv')    
-    return train_set_set, test_set
+    return train_set, test_set
 
 
 
@@ -124,14 +124,10 @@ def transform_data(path):
     
     train_set, test_set = read_data(path)
     
-    # Numerical variables can be dicrete or continuous:
-    discrete_variables = ['Rooms', 'Bedroom2', 'Bathroom', 'Car']
     continuous_variables = ['Propertycount', 'Landsize', 'BuildingArea']
 
-    temporal_variables = ['Date', 'YearBuilt']
     categorical_variables = ['SellerG', 'Method', 'Suburb', 'Address', 
                              'Postcode', 'CouncilArea', 'Regionname', 'Type']
-    geolocation = ['Lattitude', 'Longtitude']
     
     # Tranformation on continuos variables
     train_set, test_set = transform_continuos(train_set, test_set, continuous_variables)
@@ -140,9 +136,9 @@ def transform_data(path):
     train_set, test_set = transform_temporal_variables(train_set, test_set)
     
     # Transformation on categorical variables:
-    train_set, test_set, train_set2, test_set2, cat_encoder = transform_categorical(train_set, test_set)
+    train_set, test_set, train_set2, test_set2, cat_encoder = transform_categorical(train_set, test_set, categorical_variables)
     
     save_data(path, train_set, test_set, train_set2, test_set2, cat_encoder)
 
-if __name__ == '__name__':
+if __name__ == '__main__':
 	transform_data(sys.argv)
