@@ -41,10 +41,10 @@ Docker Compose must be installed on the host.
 #### Installation
 Download the project by cloning the Git repository: 
 
-```https://github.com/TBSantana/Ifood_Exercise.git```
+```https://github.com/TBSantana/ML_Automated_Pipeline.git```
 
 #### Project execution
-1. In the terminal, go to the main project's directory and execute the following code to create the images:
+1. In the terminal, go to the main project's directory and execute the following code to create the Docker images:
 
 ```docker bluid -t clean_image -f clean_data/Dockerfile .```
 
@@ -69,11 +69,16 @@ How to access the online documentation:
 + Alternative documentation - <host_address>/redoc. Ex.: ```http://127.0.0.2:5000/redoc```
 
 #### Usage examples
-1. Access the API documentation at ```http://<host_address>:5000/docs``` and click on the ```predict``` POST method
-
-![prediction](/images/usage_examples1.png)
+1. Access the API documentation at ```http://<host_address>:5000/docs``` and click on the ```predict``` POST method.
 
 2.  Click on ```Try it out```, copy the following json and paste it in the "Request body" section. Then, click on ```Execute```.
+
+The related predicted price will show up in the ```Response body```.
+
+<details><summary>Click here to see the usage example images.</summary>
+<p>
+
+![prediction](/images/usage_examples1.png)
 
 ```
 {
@@ -90,9 +95,10 @@ How to access the online documentation:
 
 ![execute](/images/usage_examples4.png)
 
-The related predicted price will show up in the ```Response body```, like the following image:
-
 ![response](/images/usage_examples3.png)
+
+</p>
+</details>
 
 ## Task 2 - AWS infrastructure
 *Description* - Propose an AWS architecture to serve a solution for the previous task.
@@ -113,4 +119,5 @@ As can be seen, this project is pretty simple. It works, but do not covers the e
 + Select more algorithms during the training step
 + Develop a Tuning step and select the model that presents the best performance
 + Add a logging feature to monitoring the containers execution
++ Create a script do automatize the Docker images building
 
