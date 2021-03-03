@@ -36,3 +36,6 @@ Since AWS Sagemaker offers a lot of products to support ML automated pipeline, I
     + Human review 
     + One-Click Deployment 
  + **Reduction of 54% on TCO (Total Coast Ownership)**
+
+**Note:**
+If the project delivered on Task 1 were a full ML pipeline, the colected training data would be storaged on S3 as well.
