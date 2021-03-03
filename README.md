@@ -95,5 +95,7 @@ The related predicted price will show up in the ```Response body```, like the fo
 ## Task 2 - AWS infrastructure
 *Description* - Propose an AWS architecture to serve a solution for the previous task.
 
+See the details of the proposed infrastructure [here](images/AWS%20Infra.png). 
+
 ## Task 3 - Coding challenge (Bonus)
 TODO
