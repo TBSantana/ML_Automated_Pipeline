@@ -35,9 +35,7 @@ Since AWS Sagemaker offers a lot of products to support ML automated pipeline, I
     + Integration with Kubernetes 
     + Human review 
     + One-Click Deployment 
-
- + Redução de 54% no TCO (Total Coast Ownership)
- + Fornece containers otimizados de frameworks como Tensorflow, capazes de gerar uma redução de até 90% no custo de treinamento
+ + **Reduction of 54% on TCO (Total Coast Ownership)**
  
 ### Tuning
 HPO - Hyper parameter Optimization
