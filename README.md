@@ -2,7 +2,7 @@ An automated ML model training process using Docker Compose.
 
 ## Index
 
-[Task 1 - ML model serving](#task-1---ml-model-serving)
+ [Task 1 - ML model serving](#task-1---ml-model-serving) 
 
   * [Part I: Create an automated ML model training process](#part-i---create-an-automated-ml-model-training-process)
 
@@ -16,9 +16,9 @@ An automated ML model training process using Docker Compose.
 
     * [Usage examples](#usage-examples)
 
-[2. Task 2 - AWS infrastructure](#task-2---aws-infrastructure)
+[Task 2 - AWS infrastructure](#task-2---aws-infrastructure)
 
-[3. Task 3 - Coding challenge (Bonus)](#task-3---coding-challenge-bonus)
+[Task 3 - Coding challenge (Bonus)](#task-3---coding-challenge-bonus)
 
 
 
@@ -71,8 +71,6 @@ How to access the online documentation:
 
 2.  Click on ```Try it out```, copy the following json and paste it in the "Request body" section. Then, click on ```Execute```.
 
-![try it out](/images/usage_examples2.png)
-
 ```
 {
   "suburb": "Elsternwick",        # The suburb where the house is located
@@ -83,6 +81,8 @@ How to access the online documentation:
   "buildingArea": 204.0           # The size of the house
 }
 ```
+
+![try it out](/images/usage_examples2.png)
 
 ![execute](/images/usage_images4.png)
 
