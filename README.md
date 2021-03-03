@@ -70,6 +70,9 @@ How to access the online documentation:
 ![prediction](/images/usage_examples1.png)
 
 2.  Click on ```Try it out```, copy the following json and paste it in the "Request body" section. Then, click on ```Execute```.
+
+![try it out](/images/usage_examples2.png)
+
 ```
 {
   "suburb": "Elsternwick",        # The suburb where the house is located
@@ -81,9 +84,7 @@ How to access the online documentation:
 }
 ```
 
-![try it out](/images/usage_examples2.png)
-
-![execute](/images/usage_examples4.png)
+![execute](/images/usage_images4.png)
 
 The related predicted price will show up in the ```Response body```, like the following image:
 
