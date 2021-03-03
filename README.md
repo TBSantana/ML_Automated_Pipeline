@@ -16,8 +16,6 @@ This is the project of an automated ML model training process using Docker Compo
 
   * [Part II: Rest API documentation and Swagger](#part-ii---rest-api-documentation-and-swagger)
 
-    * [Usage examples](#usage-examples)
-
 [Task 2 - AWS infrastructure](#task-2---aws-infrastructure)
 
 [Task 3 - Coding challenge (Bonus)](#task-3---coding-challenge-bonus)
@@ -74,15 +72,15 @@ How to access the online documentation:
 + Main documentation - <host_address>/docs. Ex.: ```http://127.0.0.2:5000/docs```
 + Alternative documentation - <host_address>/redoc. Ex.: ```http://127.0.0.2:5000/redoc```
 
-#### Usage examples
+<details><summary>Click here to see a usage example.</summary>
+<p>
+
+#### Usage example
 1. Access the API documentation at ```http://<host_address>:5000/docs``` and click on the ```predict``` POST method.
 
 2.  Click on ```Try it out```, copy the following json and paste it in the "Request body" section. Then, click on ```Execute```.
 
 The related predicted price will show up in the ```Response body```.
-
-<details><summary>Click here to see the usage example images.</summary>
-<p>
 
 ![prediction](/images/usage_examples1.png)
 
