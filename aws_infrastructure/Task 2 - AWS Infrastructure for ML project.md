@@ -4,15 +4,23 @@ The proposed AWS Infrastructure for this project is as follow:
 
 <img src = "images/AWS Infra.png">
 
-This model consists on up all the code under the AWS Sagemaker Management and storage the pipeline artefacts on the AWS Simple Cloud Storage (S3). But why?
+This model consists on up all the code under the AWS Sagemaker Management and storage the pipeline artefacts on the AWS Simple Cloud Storage (S3). But why? 
 
-## Sagemaker
+*Amazon Simple Storage Service (Amazon S3)* is an object storage service that offers industry-leading scalability, data availability, security, and performance. This means customers of all sizes and industries can use it to store and protect any amount of data for a range of use cases, such as data lakes, websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics.
 
-### O que é?
-Um serviço gerenciado para dar suporte à pipline end-to-end de ML desde rotulação, treinamento, teste, deploy e monitoramento.
+*Amazon Sagemaker* is a managed service to support the end-to-end ML pipline from labeling, training, testing, deploying and monitoring the model in Production. 
 
-### Vantagens
- + Abustração no gerenciamento da infraestrutura
+Since AWS Sagemaker offers a lot of products to support ML automated pipeline, I will focus this discussion on this platform.
+
+### Sagemaker advantages
+ +  Transparency
+ +  Security and Privacy 
+ +  Feature Store 
+ +  Data Labeling 
+ +  Data Processing at Scale 
+ +  Build Models
+    +  One-click Jupyter Notebooks 
+
  + Redução de 54% no TCO (Total Coast Ownership)
  + Fornece containers otimizados de frameworks como Tensorflow, capazes de gerar uma redução de até 90% no custo de treinamento
  
