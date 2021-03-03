@@ -1,4 +1,6 @@
-An automated ML model training process using Docker Compose.
+# Machine Learning Engineering Project
+
+This is the project of an automated ML model training process using Docker Compose.
 
 ## Index
 
