@@ -36,50 +36,48 @@ def update_buildingArea(ba_features, poly_scaler, model, train_set, test_set, tr
     return train_set, test_set
 
 def design_ba_model(train_set, test_set):
-
-    badf = train_set[train_set['BuildingArea'].between(20, 800) & 
-                      train_set['Landsize'].between(1, 10000)].copy()
-    badf.drop(columns=['Date', 'Bedroom2', 'Pricelog', 'Price'], inplace=True)
-    
-    # Features definition
-    ba_features = ['stname', 'Rooms', 'Suburb', 'Type', 'Bathroom', 'Car']
-
-    # Dividing the data in train set and validation set
-    train_ba, val_ba, y_train_ba, y_val_ba = train_test_split(badf[ba_features], badf['BuildingArealog'], 
-                                                              test_size=0.3, random_state=10)
-    poly_scaler = Pipeline([
-        ('std_scaler', MinMaxScaler()),
-        ('polynomial', PolynomialFeatures(degree=4, include_bias=False))
-    ])
-
-    X_train_poly_ba = poly_scaler.fit_transform(train_ba)
-    X_val_poly_ba = poly_scaler.transform(val_ba)
-
-    train_metrics = []
-    val_metrics = []
-
-    model = neighbors.KNeighborsRegressor(4)
-
-    for n_neighbors in range(4, 5):
-
-        model = neighbors.KNeighborsRegressor(n_neighbors)
-
-        ## fit the model
-        model.fit(X_train_poly_ba, y_train_ba)
-
-        ## predict training set
-        y_train_ba_pred = model.predict(X_train_poly_ba)
-        y_val_ba_pred = model.predict(X_val_poly_ba)
-
-        ba_train_RMSE = np.sqrt(mean_squared_error(y_train_ba, y_train_ba_pred))
-        ba_val_RMSE = np.sqrt(mean_squared_error(y_val_ba, y_val_ba_pred))
-
-        print("\n----- EVALUATION WITH n_neighbors={} ------".format(n_neighbors))
-        print('TRAIN SET \tRMSE: {} \nVALIDATION SET  RMSE: {} \n'.format(ba_train_RMSE, ba_val_RMSE))
-
-        train_metrics.append(ba_train_RMSE)
-        val_metrics.append(ba_val_RMSE)
-    return ba_features, poly_scaler, model
+	
+	badf = train_set[train_set['BuildingArea'].between(20, 800) & 
+					train_set['Landsize'].between(1, 10000)].copy()
+	badf.drop(columns=['Date', 'Bedroom2', 'Pricelog', 'Price'], inplace=True)
+	
+	# Features definition
+	ba_features = ['stname', 'Rooms', 'Suburb', 'Type', 'Bathroom', 'Car']
+	
+	# Dividing the data in train set and validation set
+	train_ba, val_ba, y_train_ba, y_val_ba = train_test_split(badf[ba_features], badf['BuildingArealog'], 
+															test_size=0.3, random_state=10)
+	poly_scaler = Pipeline([
+		('std_scaler', MinMaxScaler()),
+		('polynomial', PolynomialFeatures(degree=4, include_bias=False))
+	])
+	
+	X_train_poly_ba = poly_scaler.fit_transform(train_ba)
+	X_val_poly_ba = poly_scaler.transform(val_ba)
+	
+	train_metrics = []
+	val_metrics = []
+	
+	model = neighbors.KNeighborsRegressor(4)
+	
+	for n_neighbors in range(4, 5):
+	
+		model = neighbors.KNeighborsRegressor(n_neighbors)
+	
+		## fit the model
+		model.fit(X_train_poly_ba, y_train_ba)
+	
+		## predict training set
+		y_train_ba_pred = model.predict(X_train_poly_ba)
+		y_val_ba_pred = model.predict(X_val_poly_ba)
+	
+		ba_train_RMSE = np.sqrt(mean_squared_error(y_train_ba, y_train_ba_pred))
+		ba_val_RMSE = np.sqrt(mean_squared_error(y_val_ba, y_val_ba_pred))
+	
+		train_metrics.append(ba_train_RMSE)
+		val_metrics.append(ba_val_RMSE)
+		
+	return ba_features, poly_scaler, model
 	
 	
 def model_design(features,train_set, test_set):
@@ -126,7 +124,6 @@ def model_design(features,train_set, test_set):
 
 def train_model(path):
 	
-	print('\n** Training Model executing **')
 	root_dir = Path(path[1]).resolve().parent
 	
 	# Read the data
