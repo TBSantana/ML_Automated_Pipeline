@@ -1,9 +1,10 @@
 # AWS Infrastructure for ML
 
 The proposed AWS Infrastructure for this project is as follow:
+
 <img src = "images/AWS Infra.png">
 
-This is a pretty simple project, where many steps were supressed.
+This model consists on up all the code under the AWS Sagemaker Management and storage the pipeline artefacts on the AWS Simple Cloud Storage (S3). But why?
 
 ## Sagemaker
 
