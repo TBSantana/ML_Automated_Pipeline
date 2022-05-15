@@ -38,4 +38,5 @@ Since AWS Sagemaker offers a lot of products to support ML automated pipeline, I
  + **Reduction of 54% on TCO (Total Coast Ownership)**
 
 **Note:**
-If the project delivered on Task 1 were a full ML pipeline, the colected training data would be storaged on S3 as well.
+If the project delivered on Task 1 were a full ML pipeline, the colected training data would be storaged on AWS S3 as well.
+
